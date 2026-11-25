@@ -1,0 +1,182 @@
+{
+  "id": null,
+  "meta": {
+    "active_batch_definition": {
+      "batch_identifiers": {
+        "dataframe": "<DATAFRAME>"
+      },
+      "data_asset_name": "orders",
+      "data_connector_name": "fluent",
+      "datasource_name": "shopfast"
+    },
+    "batch_markers": {
+      "ge_load_time": "20261125T095201.609235Z",
+      "pandas_data_fingerprint": "3e0e0a167f4f1d5c51f5d69e6915b3ec"
+    },
+    "batch_parameters": {
+      "dataframe": "<DATAFRAME>"
+    },
+    "batch_spec": {
+      "batch_data": "PandasDataFrame"
+    },
+    "checkpoint_id": "a687518a-eac3-4334-8559-42a95d457b6b",
+    "great_expectations_version": "1.25.0",
+    "run_id": {
+      "run_name": null,
+      "run_time": "2026-11-25T10:52:01.603235+01:00"
+    },
+    "validation_id": "7be781d9-f5c2-460d-b629-91eb9d5b62a5",
+    "validation_time": "2026-11-25T09:52:01.603235+00:00"
+  },
+  "results": [
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "id": "df4687f3-5589-4786-96dc-d998756d0a67",
+        "kwargs": {
+          "batch_id": "shopfast-orders",
+          "max_value": 100000,
+          "min_value": 1000
+        },
+        "meta": {},
+        "severity": "critical",
+        "type": "expect_table_row_count_to_be_between"
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 5207
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "id": "59af16a7-e3a6-4269-9ad8-fa3fb2cb6dd5",
+        "kwargs": {
+          "batch_id": "shopfast-orders",
+          "column": "order_id"
+        },
+        "meta": {},
+        "severity": "critical",
+        "type": "expect_column_values_to_not_be_null"
+      },
+      "meta": {},
+      "result": {
+        "element_count": 5207,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "id": "1a290326-9da4-4593-92aa-c44364b829dc",
+        "kwargs": {
+          "batch_id": "shopfast-orders",
+          "column": "order_id"
+        },
+        "meta": {},
+        "severity": "critical",
+        "type": "expect_column_values_to_be_unique"
+      },
+      "meta": {},
+      "result": {
+        "element_count": 5207,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 2,
+            "value": "700135"
+          },
+          {
+            "count": 2,
+            "value": "700508"
+          },
+          {
+            "count": 2,
+            "value": "700743"
+          },
+          {
+            "count": 2,
+            "value": "701075"
+          },
+          {
+            "count": 2,
+            "value": "701191"
+          },
+          {
+            "count": 2,
+            "value": "702136"
+          },
+          {
+            "count": 2,
+            "value": "702237"
+          }
+        ],
+        "partial_unexpected_index_list": [
+          134,
+          135,
+          508,
+          509,
+          744,
+          745,
+          1077,
+          1078,
+          1194,
+          1195,
+          2140,
+          2141,
+          2242,
+          2243
+        ],
+        "partial_unexpected_list": [
+          "700135",
+          "700135",
+          "700508",
+          "700508",
+          "700743",
+          "700743",
+          "701075",
+          "701075",
+          "701191",
+          "701191",
+          "702136",
+          "702136",
+          "702237",
+          "702237"
+        ],
+        "unexpected_count": 14,
+        "unexpected_percent": 0.2688688304205877,
+        "unexpected_percent_nonmissing": 0.2688688304205877,
+        "unexpected_percent_total": 0.2688688304205877
+      },
+      "success": false
+    }
+  ],
+  "statistics": {
+    "evaluated_expectations": 3,
+    "success_percent": 66.66666666666666,
+    "successful_expectations": 2,
+    "unsuccessful_expectations": 1
+  },
+  "success": false,
+  "suite_name": "orders_suite",
+  "suite_parameters": {}
+}
