@@ -1,0 +1,8 @@
+dataset,file_or_table,description_one_sentence,business_domain,data_owner,data_steward,data_custodian,contains_personal_data_Y_N,sensitivity_level,refresh_frequency,row_count,issues_spotted
+customers,data/customers.csv | raw.customers,,Customer,"",,,y,restricted,daily,1241,duplicates
+products,data/products.csv | raw.products,,Porduct,"",,,n,Internal,Weekly,52,consistency / missing value
+orders,data/orders.csv | raw.orders,,Sale,"",,,n,Internal,daily,5207,duplicates / missing values
+order_items,data/order_items.csv | raw.order_items,,Sale,"",,,n,Internal,daily,9193,Invalid quantities / invalid product_id
+payments,data/payments.csv | raw.payments,,Finance,"",,,y,Confidential,daily,4902,missing values card numbers
+support_tickets,data/support_tickets.csv | raw.support_tickets,,Custommer service,"",,,y,restricted,daily,422,sensitive value in free text
+marketing_campaign_export,data/marketing_campaign_export.csv | raw.marketing_campaign_export,,Marketing,"",,,y,Confidential,Per Campaign,600,
