@@ -1,0 +1,8 @@
+dimension,rule_in_plain_words,column,how_you_measured_it,failing_rows,total_rows,score_pct,severity_high_medium_low,who_should_fix_owner_steward_custodian
+Completeness,email is filled,email,isna().sum(),115,1241,90.73,low,owner
+Uniqueness,customer_id is unique,customer_id,duplicated().sum(),168,1241,86.46,critical,owner
+Validity,email matches the regex,email,~str.match(regex).sum() / ~str.contains(regex).sum() / str.strip().isin(cols) & ~str.contains(regex).sum(),128,1241,89.69,medium,custodian
+Validity,signup_date is YYYY-MM-DD,signup_date,~str.contains(regex).sum(),303,1241,75.58,medium,custodian
+Consistency,,,,,,,,
+Accuracy,birth_date is not in the future nor before 1906,birth_date,to_datetime > today or < 1906-01-01,8,1241,99.36,low,owner
+Timeliness,,,,,,,,

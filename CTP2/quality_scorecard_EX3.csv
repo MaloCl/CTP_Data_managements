@@ -1,0 +1,7 @@
+dimension,rule_in_plain_words,column,how_you_measured_it,failing_rows,total_rows,score_pct,severity_high_medium_low,who_should_fix_owner_steward_custodian
+Completeness,order_date is filled,order_date,GX expect_column_values_to_not_be_null,11,,,high,owner
+Uniqueness,order_id is unique,order_id,GX expect_column_values_to_be_unique,14,,,critical,owner
+Validity,status is one of pending/shipped/delivered/cancelled/returned,status,GX expect_column_values_to_be_in_set,9,,,medium,custodian
+Consistency,customer_id exists in customers,customer_id,GX expect_column_values_to_be_in_set (set des customer_id de customers.csv),14,,,high,steward
+Accuracy,order_date is between 2000-01-01 and today (no future date),order_date_dt,GX expect_column_values_to_be_between,5,,,high,owner
+Accuracy,total_amount_eur is > 0 and <= 10000,total_amount_eur,GX expect_column_values_to_be_between (strict_min=True),6,,,critical,owner
